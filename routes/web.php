@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::get('about','HomeController@index');
 Route::get('contact','ContactController@contact');
+Route::get('edu','EduController@getInfo');
 // Route::get('test',function(){
 //     return "Welcome to laravel course.";
 // });
