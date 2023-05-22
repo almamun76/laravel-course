@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('about','HomeController@index');
-Route::get('contact','HomeController@contact');
+Route::get('contact','ContactController@contact');
 // Route::get('test',function(){
 //     return "Welcome to laravel course.";
 // });
