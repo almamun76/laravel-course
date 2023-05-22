@@ -10,5 +10,6 @@
 	<h3>Institute: <?php echo $institute; ?></h3>
 	<h3>Last Degree: <?php echo $lastDegree; ?></h3>
 	<h3>Result: <?php echo $result; ?></h3>
+	<h3>Subjects: <?php echo $subjects[0].', '.$subjects[1].', '.$subjects[2]; ?></h3>
 </body>
 </html>

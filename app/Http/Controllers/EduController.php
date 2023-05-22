@@ -9,6 +9,7 @@ class EduController extends Controller{
         $this->data['institute']='ABC';
         $this->data['lastDegree']='PQR';
         $this->data['result']='XYZ';
+        $this->data['subjects']=['Bangla','English','ICT'];
         return view('education.edu',$this->data);
     }
 }
