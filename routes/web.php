@@ -21,6 +21,16 @@ Route::get('/', function () {
 Route::get('about','HomeController@index');
 Route::get('contact','ContactController@contact');
 Route::get('edu','EduController@getInfo');
+//route to create userr
+Route::get('create-user','UserController@create');
+
+
+//route to retrieve and display all user data
+Route::get('show-all-user','UserController@showAllUser');
+
+//route to retrieve and display selected user's data
+Route::get('show-all-user/{id}','UserController@showSelectedUsers');
+Route::get('show-all-user/{id}/delete','UserController@deleteUser');
 // Route::get('test',function(){
 //     return "Welcome to laravel course.";
 // });
