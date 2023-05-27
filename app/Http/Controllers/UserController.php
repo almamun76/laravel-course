@@ -10,8 +10,8 @@
         public function create(){
             //keys must be same as the field name of table uses
             $data=[
-                'name'=>'Masud',
-                'email'=>'masud@gmail.com',
+                'name'=>'Rubel',
+                'email'=>'rubel@gmail.com',
                 'password'=>'1234'
             ];
 
@@ -32,6 +32,7 @@
         public function showSelectedUsers($id)
         {
             //find($id) means, select * from users where $id=id_value;
+            //and assign to $selectedUser
             $selectedUser=User::find($id);
 
             return $selectedUser;
@@ -42,6 +43,17 @@
             $deleteUser->delete();
 
             return "Deleted";
+        }
+
+        public function editUser($id){
+            $editUser=User::find($id);
+            //assign new name
+            $editUser->name='Habibullah';
+            //assign new email
+            $editUser->email='habibullah@gmail.com';
+            $editUser->save();
+
+            return "Edited";
         }
     }
 ?>
