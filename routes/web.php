@@ -18,20 +18,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about','HomeController@index');
-Route::get('contact','ContactController@contact');
-Route::get('edu','EduController@getInfo');
-//route to create userr
-Route::get('create-user','UserController@create');
+//route to show all users record
+Route::get('/users','UserController@index');
 
+//post start (insert data)
+Route::get('/user-form','UserController@formSubmit');
+Route::post('/add-user','UserController@store');
+//post end
 
-//route to retrieve and display all user data
-Route::get('show-all-user','UserController@showAllUser');
+//put start (update all columns of a table)
+Route::get('/user-form-update','UserController@formUpdate');
+Route::put('/update-user','UserController@update');
+//put end
 
-//route to retrieve and display selected user's data
-Route::get('show-all-user/{id}','UserController@showSelectedUsers');
-Route::get('show-all-user/{id}/delete','UserController@deleteUser');
-Route::get('show-all-user/{id}/edit','UserController@editUser');
-// Route::get('test',function(){
-//     return "Welcome to laravel course.";
-// });
+//patch start (update few columns of a table)
+Route::get('/user-form-update','UserController@formUpdate');
+Route::patch('/update-user-name','UserController@updateName');
+//patch end
+
+//delete start (delete record)
+Route::get('/user-form-update','UserController@formUpdate');
+Route::delete('/delete-user','UserController@delete');
+//delete end
