@@ -17,8 +17,19 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
-
 // Route::view('/', 'welcome');
+
+//route group start
+Route::prefix("admin")->group(function(){
+    Route::get('/hello', function () {
+        return 'Hello....';
+    });
+
+    Route::get('/world', function () {
+        return 'World....';
+    });
+});
+//route group end
 
 //route to show all users record
 Route::get('/users','UserController@index');
