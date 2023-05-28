@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::view('/', 'welcome');
+
 //route to show all users record
 Route::get('/users','UserController@index');
 
@@ -40,3 +42,12 @@ Route::patch('/update-user-name','UserController@updateName');
 Route::get('/user-form-update','UserController@formUpdate');
 Route::delete('/delete-user','UserController@delete');
 //delete end
+
+//pass single parameter
+Route::get('/users/{id}','UserController@showUserId');
+
+//pass multiple parameter
+// Route::get('/users/{id}/{email}','UserController@showUserIdMail');
+
+//pass optional parameter
+Route::get('/users/{id}/profile/{name?}','UserController@showUserIdName');

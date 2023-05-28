@@ -39,5 +39,20 @@
         public function delete(){
             return "User deleted successfully(delete).";
         }
+
+        //show user id
+        public function showUserId($id){
+            return $id;
+        }
+
+        //show user id and email
+        public function showUserIdMail($id,$mail){
+            return $id.' '.$mail;
+        }
+
+        //show user id and name(optional)
+        public function showUserIdName($id,$name="Babu"){
+            return $id.' '.$name;
+        }
     }
 ?>
